@@ -10,6 +10,7 @@ public class Studente extends Persona { // sottoclasse studente
     private String pianoDiStudi;
     private boolean tassePagate;
     private List<Observer> osservatori = new ArrayList<>();
+    private StatoEsame statoEsame;
 
     // Costruttore vuoto
     public Studente() {
@@ -19,6 +20,7 @@ public class Studente extends Persona { // sottoclasse studente
         this.residenza = "";
         this.pianoDiStudi = "";
         this.tassePagate = false;
+        this.statoEsame = new Prenotato();
     }
 
     // Costruttore parametrizzato
@@ -29,6 +31,7 @@ public class Studente extends Persona { // sottoclasse studente
         this.residenza = residenza;
         this.pianoDiStudi = pianoDiStudi;
         this.tassePagate = tassePagate;
+        this.statoEsame = new Prenotato();
     }
     
     public void aggiungiOsservatore(Observer osservatore) {
@@ -102,5 +105,20 @@ public class Studente extends Persona { // sottoclasse studente
 
     public void setTassePagate(boolean tassePagate) {
         this.tassePagate = tassePagate;
+    }
+    public void setStatoEsame(StatoEsame statoEsame) {
+        this.statoEsame = statoEsame;
+    }
+
+    public void prenotaEsame() {
+        statoEsame.prenotaEsame(this);
+    }
+
+    public void iniziaEsame() {
+        statoEsame.iniziaEsame(this);
+    }
+
+    public void completaEsame() {
+        statoEsame.completaEsame(this);
     }
 }

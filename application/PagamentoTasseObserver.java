@@ -17,4 +17,10 @@ public class PagamentoTasseObserver implements Observer {
             System.out.println("Lo studente " + studente.getNome() + " " + studente.getCognome() + " deve ancora pagare le tasse.");
         }
     }
+
+	@Override
+	public void updatePagamentoTasse(Studente studente) {
+		// TODO Auto-generated method stub
+		
+	}
 }
