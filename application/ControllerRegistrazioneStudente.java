@@ -29,7 +29,10 @@ public class ControllerRegistrazioneStudente {
 
     @FXML
     private Button registraButton;
-
+   
+    private Interpreter interpreter = new AggiungiStudenteInterpreter();
+    
+    
     @FXML
     private void initialize() {
         // Inizializza il ChoiceBox con opzioni di piano di studi, se necessario
@@ -38,6 +41,7 @@ public class ControllerRegistrazioneStudente {
     @FXML
     private void handleRegistraButton(ActionEvent event) {
         // Crea un'istanza di StudenteFactory
+    	String inputCommand = "aggiungi studente";
         StudenteFactory studenteFactory = new StudenteFactory();
 
         // Chiamare il metodo della StudenteFactory per creare uno studente
@@ -61,4 +65,6 @@ public class ControllerRegistrazioneStudente {
             // Gestisci eventuali eccezioni durante il salvataggio su MongoDB
         }
     }
+    
+    
 }
