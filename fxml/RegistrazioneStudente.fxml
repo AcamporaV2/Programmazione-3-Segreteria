@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">    <center>
-        <VBox fx:id="pianoDiStudiChoiceBox" alignment="CENTER" prefHeight="500.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <VBox fx:id="pianoDiStudiChoiceBox" alignment="CENTER" prefHeight="362.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Nome">
                <font>
@@ -68,17 +68,22 @@
                </VBox.margin>
             </Label>
             <ChoiceBox maxWidth="200.0" prefHeight="30.0" />
-         </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="50.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin></VBox>
     </center>
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="indietroButton" mnemonicParsing="false" text="Indietro">
-               <HBox.margin>
-                  <Insets left="15.0" top="15.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
+      <HBox prefHeight="43.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
+   <bottom>
+      <Button fx:id="ConfermaStudente" alignment="CENTER" mnemonicParsing="false" onAction="#ConfermaDatiStudente" prefHeight="25.0" prefWidth="74.0" text="Conferma" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
 </BorderPane>
