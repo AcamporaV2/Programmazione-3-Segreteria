@@ -21,17 +21,6 @@ public class Controller {
    
 	 @FXML
 	 	private Button studente;
-
-
-	 @FXML 
-	 private Button registrazioneButton;
-	 
-	 @FXML 
-	 private Button cercaStudente;
-	 
-	 @FXML 
-	 private Button esame;
-	 
 	 
 	 @FXML 
 	 private Button AppelloEsame;
@@ -49,25 +38,7 @@ public class Controller {
 	 @FXML 
 	 private Button Valutazione;
 	 
-    @FXML
-    private void showHomeSegreteria(ActionEvent event) {
-        try {
-            // Carica il file FXML "HomeSegreteria.fxml"
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/HomeSegreteria.fxml"));
-            Parent root = loader.load();
 
-            // Crea una nuova scena con il contenuto del file FXML
-            Scene scene = new Scene(root);
-
-            // Crea un nuovo stage (finestra) e imposta la scena
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Home Segreteria");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @FXML
     private void showHomeDocente(ActionEvent event) {
     	 try {
@@ -107,74 +78,7 @@ public class Controller {
             e.printStackTrace();
         }   
     }
-    
-    @FXML
-    private void MostraRegistrazione(ActionEvent event) {
-    	try {
-            // Carica il file FXML "HomeSegreteria.fxml"
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RegistrazioneStudente.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nuova scena con il contenuto del file FXML
-            Scene scene = new Scene(root);
-
-            // Crea un nuovo stage (finestra) e imposta la scena
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Inserisci uno studente");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }   
-    }
-    
-    
-    @FXML
-    private void RicercaStudente(ActionEvent event) {
-    	try {
-            // Carica il file FXML "HomeSegreteria.fxml"
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RicercaStudente.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nuova scena con il contenuto del file FXML
-            Scene scene = new Scene(root);
-
-            // Crea un nuovo stage (finestra) e imposta la scena
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Inserisci uno studente");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }   
-    }
-    
-    @FXML
-    private void MostraEsami(ActionEvent event) {
-    	try {
-            // Carica il file FXML "HomeSegreteria.fxml"
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MostraEsami.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nuova scena con il contenuto del file FXML
-            Scene scene = new Scene(root);
-
-            // Crea un nuovo stage (finestra) e imposta la scena
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Inserisci uno studente");
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }   
-    }
-   
-    
-    @FXML
-    private void ConfermaDatiStudente(ActionEvent event) throws IOException {   
-    }
-    
-    
+         
     @FXML
     private void InserimentoAppello(ActionEvent event) {
     	try {
